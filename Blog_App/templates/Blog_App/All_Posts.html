@@ -1,0 +1,28 @@
+{% extends "SkeletonPage.html" %}
+{% load static %}
+{% block title %} all my posts{% endblock title %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static "All_Posts.css" %}">
+<link rel="stylesheet" href="{% static "posts.css" %}">
+
+{% endblock css_files %}
+
+{% block content %}
+
+<section id="all-posts">
+    <h2> My Collected Posts</h2>
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+    {% include "Blog_App/snippets.html" %}
+
+
+       
+</section>
+
+
+{% endblock content %}

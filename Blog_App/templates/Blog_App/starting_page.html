@@ -1,0 +1,49 @@
+{% extends "SkeletonPage.html" %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "StartingPage_Global.css" %}">
+<link rel="stylesheet" href="{% static "posts.css" %}">
+{% endblock css_files %}
+
+
+{% block title %}
+   My Page
+{% endblock title %}
+
+{% block content %}
+
+
+<section id="welcome">
+    <header>
+       <img src="{% static "images/max.png" %}" alt="nithin">
+       
+       <h2>NITHIN'S BLOCK</h2>
+    </header>
+       <p>I'm Nithin a web Devloper</p>
+</section>
+
+<section id="latest-posts">
+    <h2> my latest thoughts</h2>
+    <ul>
+        {% include "Blog_App/snippets.html" %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What I Do</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores corporis in totam consequatur accusamus. Reiciendis pariatur nihil, ipsum eveniet, debitis impedit non maiores nostrum inventore iure nobis quam magni?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sint quos cum ipsam fugit, eligendi quaerat officia labore. Asperiores cumque vel rem qui nulla ipsam molestiae dicta consequatur architecto magnam.</p>
+
+
+</section>
+
+{% for data in object_list %}
+<h1>{{data.address}}</h1>
+<h2>{{data.name}}</h2>
+{% endfor %} 
+
+
+
+
+{% endblock content %}
+
